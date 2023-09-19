@@ -7,7 +7,10 @@ export default function SearchPageCC() {
    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
       e.preventDefault();
       const formData = new FormData(e.target as HTMLFormElement); //this is necessary to use with Form from React
-      const query = formData.get("query");
+      const query = formData.get("query")?.toString().trim();
+
+      if (query) {
+      }
    }
 
    return (
